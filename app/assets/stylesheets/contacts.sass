@@ -1,0 +1,128 @@
+// Place all the styles related to the contact controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+@import url('https://fonts.googleapis.com/css?family=Ubuntu')
+
+$white: #ecf0f1
+$main-color: #e74c3c
+$second-color: #c0392b
+
+body
+  background-color: $white
+  font-family: 'Ubuntu', sans-serif
+  margin: 0px
+  padding: 0px
+.contacts
+  width: 30%
+  background-color: $main-color
+  height: 100%
+  float: left
+  top: 0
+  bottom: 0
+  position: fixed
+  overflow-y: scroll
+  overflow-x: hidden
+  box-shadow: 0px 0px 6px 2px rgba(81, 81, 81, 0.2)
+  display: block
+  .space
+    margin-bottom: 10px
+  .contact
+    color: $white
+    height: 70px
+    border-bottom: 1px solid rgba(255, 255, 255, 0.25)
+    margin-bottom: 1px
+    margin-top: 1px
+    transition: background-color 0.5s
+    margin-left: 10px
+    margin-right: 10px
+    &:hover
+      background-color: $second-color
+      cursor: pointer
+      border-radius: 3px
+    .name
+      line-height: 25px
+      font-size: 25px
+      padding: 10px
+    .email
+      opacity: 0.9
+      margin-left: 10px
+    .image
+      margin: 10px
+      float: right
+      height: 50px
+      width: 50px
+      border-radius: 25px
+      overflow: hidden
+      border: 1px solid rgba(0, 0, 0, 0.03)
+      img
+        width: 100%
+
+
+.detail
+  float: right
+  width: 65%
+  padding: 10px
+  margin-top: 10px
+  margin-right: 20px
+  border-radius: 4px
+  background-color: #fff
+  color: rgba(0,0,0,0.9)
+  box-shadow: 0px 0px 6px 1px rgba(81, 81, 81, 0.06)
+  table
+    tr
+      td
+        font-size: 17px
+        line-height: 17px
+  .avatar
+    height: 250px
+    width: 250px
+    margin-right: 10px
+    border-radius: 5px
+    img
+      width: 100%
+  .name
+    font-size: 50px
+    line-height: 50px
+    height: 100px
+    color: $main-color
+  .ico
+    line-height: 20px
+    color: $main-color
+.block
+  width: 100%
+  height: 60px
+  .title
+    font-size: 50px
+    line-height: 50px
+    float: left
+    font-weight: bold
+    color: $main-color
+  .date
+    float: right
+    color: rgba(0,0,0,0.6)
+    font-size: 14px
+    line-height: 14px
+    margin-right: 10px
+    padding-top: 30px
+a
+  text-decoration: none
+
+::-webkit-scrollbar
+  height: 6px
+  width: 8px
+
+
+::-webkit-scrollbar-thumb
+  background-color: $second-color
+  border-radius: 3px
+  &:hover
+    background-color: $white
+
+
+::-webkit-scrollbar-track
+  background-color: rgba(0, 0, 0, 0)
+
+.mdl-button--colored
+  bottom: 30px
+  right: 30px
+  position: fixed

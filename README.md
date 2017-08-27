@@ -1,24 +1,17 @@
-# README
+# Kişiler
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Bu Rails uygulaması sadece tanıdığınız kişileri değil, okuduğunuz kitaplardaki kahramanları, izlediğiniz filimlerdeki karakterleri de yedekleyen bir rehber uygulamasıdır. 
 
-Things you may want to cover:
+Tanıdığınız arkadaşlarınıza belirli aralıklarla yorum yazarak arkadaşlarınızdaki değişimi gözlemleyebilirsiniz.
 
-* Ruby version
+Eski arkadaşlarınızın numarası rehberinizde kalabalık yapıyor, silmek istiyor ama silemiyorsanız buraya yedekleyebilirsiniz. Geri Yükleme yaparken tüm kişiler arasından istediğiniz kişileri seçebilirsiniz.
 
-* System dependencies
+# Ekran Görüntüleri
+![ss](https://user-images.githubusercontent.com/19302254/29752074-d215bc14-8b5f-11e7-807a-6e116c6f35f9.png)
 
-* Configuration
+# Yapılacaklar
+- [ ] Portre Oluşturma
+- [ ] .cvs uzantılı dosya export Etme
+- [ ] Gelişmiş Arama Yapma 
 
-* Database creation
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...

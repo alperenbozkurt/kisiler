@@ -1,0 +1,125 @@
+.contacts
+  .space
+  .contact
+    .image
+      = image_tag('http://www.newsshare.in/wp-content/uploads/2017/04/Miniclip-8-Ball-Pool-Avatar-15.png')
+    .name
+      Alperen BOZKURT
+    .email
+      bozkurttalperen@gmail.com
+  .contact
+    .image
+      = image_tag('http://localhost:3000/images/thumb/missing.png')
+    .name
+      Mahmut İBRAHİMOĞLU
+    .email
+      bozkurttalperen@gmail.com
+  .contact
+    .image
+      = image_tag('http://localhost:3000/images/thumb/missing.png')
+    .name
+      Mahmut HASANOĞLU
+    .email
+      bozkurttalperen@gmail.com
+  .contact
+    .image
+      = image_tag('http://localhost:3000/images/thumb/missing.png')
+    .name
+      Recep Tayyip ERDOGAN
+    .email
+      bozkurttalperen@gmail.com
+  .contact
+    .image
+      = image_tag('http://localhost:3000/images/thumb/missing.png')
+    .name
+      Münevver KARAİHSAN...
+    .email
+      bozkurttalperen@gmail.com
+  .contact
+    .image
+      = image_tag('http://localhost:3000/images/thumb/missing.png')
+    .name
+      Ali KOÇ
+    .email
+      bozkurttalperen@gmail.com
+  - (0..10).each do |e|
+    .contact
+      .image
+        = image_tag('http://localhost:3000/images/thumb/missing.png')
+      .name
+        Alperen BOZKURT
+      .email
+        bozkurttalperen@gmail.com
+.detail
+  %table
+    %tr
+      %th.name{colspan: "3"}
+        Alperen BOZKURT
+    %tr
+      %td{:rowspan => "7"}
+        = image_tag('http://www.newsshare.in/wp-content/uploads/2017/04/Miniclip-8-Ball-Pool-Avatar-15.png',align: "left",class: 'avatar')
+
+      %td
+        %i.fa.fa-phone.ico
+      %td
+        0507 906 1137
+    %tr
+      %td
+        %i.fa.fa-envelope.ico
+      %td
+        bozkurttalperen@gmail.com
+    %tr
+      %td
+        %i.fa.fa-map-marker.ico
+      %td
+        Hürel Mahallesi 25. Sokak Rails Apartmanı No:0 Mamak
+        #{"Ankara"}, #{"Türkiye"}
+
+    %tr
+      %td
+        %i.fa.fa-birthday-cake.ico
+      %td
+        24 Eylül 1997 - 20 yaşına girmesine 28 gün kaldı.
+    %tr
+      %td
+        %i.fa.fa-globe.ico
+      %td
+        = link_to 'alperenbozkurt.net', 'http://alperenbozkurt.net'
+    %tr
+      %td
+        %i.fa.fa-briefcase.ico
+      %td
+
+        #{'Fırat Üniversitesi'}'nde #{'Öğrenci'}
+    %tr
+      %td
+        %i.fa.fa-venus-mars.ico
+      %td
+
+        Erkek
+    %tr
+      %td
+      %td
+        %i.fa.fa-android.ico
+      %td
+
+        İnsan
+.detail
+  .block
+    .title
+      Portre
+    .date
+      27 Ağustos 2017 Tarihinde yazdın
+  %p Lorem Ipsum, dizgi ve baskı endüstrisinde kullanılan mıgır metinlerdir. Lorem Ipsum, adı bilinmeyen bir matbaacının bir hurufat numune kitabı oluşturmak üzere bir yazı galerisini alarak karıştırdığı 1500'lerden beri endüstri standardı sahte metinler olarak kullanılmıştır. Beşyüz yıl boyunca varlığını sürdürmekle kalmamış, aynı zamanda pek değişmeden elektronik dizgiye de sıçramıştır. 1960'larda Lorem Ipsum pasajları da içeren Letraset yapraklarının yayınlanması ile ve yakın zamanda Aldus PageMaker gibi Lorem Ipsum sürümleri içeren masaüstü yayıncılık yazılımları ile popüler olmuştur.
+  %br
+  = link_to 'Önceki Yazıların', '#', style: "text-align: center"
+
+.login
+  .img#demo-menu-lower-right
+    = image_tag current_user.avatar.url(:thumb)
+  %ul.mdl-menu.mdl-menu--bottom-right.mdl-js-menu.mdl-js-ripple-effect{:for => "demo-menu-lower-right"}
+    %li.mdl-menu__item Alperen Bozkurt
+    %li.mdl-menu__item Çıkış Yap
+
+%button.mdl-button.mdl-js-button.mdl-button--fab.mdl-js-ripple-effect.mdl-button--colored
+  %i.material-icons +

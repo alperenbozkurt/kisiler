@@ -58,3 +58,4 @@ gem 'haml'
 gem 'devise'
 gem "paperclip", "~> 4.1"
 gem 'material_design_lite-rails', '~> 1.3'
+gem "font-awesome-rails"
