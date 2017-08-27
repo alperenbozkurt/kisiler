@@ -1,0 +1,21 @@
+.top
+  .title
+    = link_to 'Kişiler', root_path
+  .info
+    > Giriş Yap
+
+
+.content
+  %h2 Giriş Yap
+  = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
+    .field
+      = f.email_field :email, autofocus: true, placeholder: "Kullanıcı Adı veya Eposta"
+    .field
+      = f.password_field :password, autocomplete: "off", placeholder: "Şifreniz"
+    - if devise_mapping.rememberable?
+      .field
+        = f.check_box :remember_me, class: "remember"
+        = f.label :remember_me, "Beni hatırla", class: "remember"
+    .actions
+      = f.submit "Giriş Yap"
+  = render "devise/shared/links"

@@ -1,0 +1,16 @@
+.top
+  .title
+    = link_to 'Kişiler', root_path
+  .info
+    > Yeni Parola
+.content
+  = form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :put }) do |f|
+    = devise_error_messages!
+    = f.hidden_field :reset_password_token
+    .field
+      = f.password_field :password, autofocus: true, autocomplete: "off",placeholder: "Yeni Parola"
+    .field
+      = f.password_field :password_confirmation, autocomplete: "off", placeholder: "Tekrar Yeni Parola"
+    .actions
+      = f.submit "Parolamı Değiştir"
+  = render "devise/shared/links"

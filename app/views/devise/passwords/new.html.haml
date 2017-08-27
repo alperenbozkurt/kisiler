@@ -1,0 +1,14 @@
+.top
+  .title
+    = link_to 'Kişiler', root_path
+  .info
+    > Parolamı Unuttum
+.content
+  %h2 Parolanızı mı unuttunuz ?
+  = form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f|
+    = devise_error_messages!
+    .field
+      = f.email_field :email, autofocus: true, placeholder: "Eposta"
+    .actions
+      = f.submit "Parolamı sıfırla"
+  = render "devise/shared/links"

@@ -1,0 +1,24 @@
+.kurt
+  Kişiler
+  %form
+.boxes
+  Tanıdığınız, Tanımadığınız, Kitap kahramanları, Film artizleri ve diğerleri...
+  %br
+  %br
+  Yakın arkadaşınız mı çok değişti yoksa siz mi ?
+  %br
+  %br
+  Peki ya onunla ilk tanıştığınızda ne hissetmiştiniz ?
+  %br
+  %br
+  Numarası rehberimde kalabalık yapıyor ama silmek de istemiyorum !!!
+- if current_user
+  .login
+    .img#demo-menu-lower-right
+      = image_tag current_user.avatar.url(:thumb)
+    %ul.mdl-menu.mdl-menu--bottom-right.mdl-js-menu.mdl-js-ripple-effect{:for => "demo-menu-lower-right"}
+      %li.mdl-menu__item Alperen Bozkurt
+      %li.mdl-menu__item Çıkış Yap
+- else
+  .login
+    = link_to 'Oturum Aç', new_user_session_path
