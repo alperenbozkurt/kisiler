@@ -1,0 +1,23 @@
+= form_for @new_contact do |f|
+  .field
+    = f.text_field :name, autofocus: true, placeholder: "Adı"
+  .field
+    = f.text_field :surname, placeholder: "Soyadı"
+  = f.fields_for :phones do |builder|
+    = builder.text_field :phone, placeholder: "Telefon Numarası"
+  .field
+    = f.email_field :email, placeholder: "E-posta"
+  .field
+    = f.text_field :address, placeholder: "Adres"
+  .field
+    = f.text_field :city, placeholder: "Şehir"
+  .field
+    = f.text_field :country, placeholder: "Ülke"
+  .field
+    = f.date_field :birthday, placeholder: "Doğum Günü"
+  .field
+    = f.text_field :website, placeholder: "Website"
+  .field
+    = f.file_field :avatar
+  .actions
+    = f.submit "Kişiyi Ekle"

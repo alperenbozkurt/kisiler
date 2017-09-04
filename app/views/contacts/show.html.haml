@@ -14,55 +14,52 @@
   %table
     %tr
       %th.name{colspan: "3"}
-        Alperen BOZKURT
+        = @contact.fullname
     %tr
       %td{:rowspan => "7"}
-        = image_tag('http://www.newsshare.in/wp-content/uploads/2017/04/Miniclip-8-Ball-Pool-Avatar-15.png',align: "left",class: 'avatar')
+        = image_tag @contact.user.avatar(:medium), height: "250px", wight: "250px"
 
-      %td
-        %i.fa.fa-phone.ico
-      %td
-        0507 906 1137
+      - @contact.phones.each do |tel|
+        %td
+          %i.fa.fa-phone.ico
+        %td
+          = tel.phone
     %tr
       %td
         %i.fa.fa-envelope.ico
       %td
-        bozkurttalperen@gmail.com
+        = @contact.email
     %tr
       %td
         %i.fa.fa-map-marker.ico
       %td
-        Hürel Mahallesi 25. Sokak Rails Apartmanı No:0 Mamak
-        #{"Ankara"}, #{"Türkiye"}
+        #{@contact.address} #{@contact.city}, #{@contact.country}
 
     %tr
       %td
         %i.fa.fa-birthday-cake.ico
       %td
-        24 Eylül 1997 - 20 yaşına girmesine 28 gün kaldı.
+        #{@contact.birthday.strftime("%m/%d/%Y")} - #{@contact.age + 1} yaşına girmesine #{@contact.remaining_days} gün kaldı.
     %tr
       %td
         %i.fa.fa-globe.ico
       %td
-        = link_to 'alperenbozkurt.net', 'http://alperenbozkurt.net'
+        = link_to @contact.website, @contact.website
     %tr
       %td
         %i.fa.fa-briefcase.ico
       %td
-
         #{'Fırat Üniversitesi'}'nde #{'Öğrenci'}
     %tr
       %td
         %i.fa.fa-venus-mars.ico
       %td
-
         Erkek
     %tr
       %td
       %td
         %i.fa.fa-android.ico
       %td
-
         İnsan
 .detail
   .block
