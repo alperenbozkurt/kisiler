@@ -6,6 +6,12 @@ class Contact < ApplicationRecord
   accepts_nested_attributes_for :phones
   belongs_to :user
 
+  validates :name, presence: true
+  validates :website, format: { with: URI::regexp(%w(http https)), message: "website http veya https ile başlamalıdır."}
+  validates :gender, inclusion: { in: %w(Kadın Erkek Diğer) }, presence: true
+  validates :user_id, presence: true
+
+
   def fullname
     name = self.name.humanize + " " + self.surname.upcase
     if name.size < 19

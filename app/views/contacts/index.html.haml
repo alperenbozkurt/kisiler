@@ -1,8 +1,9 @@
 .contacts
   .space
+  = "Buralarda in cin top oynuyor..." if @contacts.empty?
   - @contacts.each do |contact|
     = link_to contact do
-      .contact{onclick: '#'}
+      .contact
         .image
           = image_tag(contact.user.avatar(:thumb))
         .name
@@ -14,56 +15,52 @@
   %table
     %tr
       %th.name{colspan: "3"}
-        Alperen BOZKURT
+        Ben (Adım SOYADIM)
     %tr
       %td{:rowspan => "7"}
-        = image_tag('http://www.newsshare.in/wp-content/uploads/2017/04/Miniclip-8-Ball-Pool-Avatar-15.png',align: "left",class: 'avatar')
-
-      %td
-        %i.fa.fa-phone.ico
-      %td
-        0507 906 1137
+        = image_tag current_user.avatar(:medium), height: "250px", wight: "250px"
+        %td
+          %i.fa.fa-phone.ico
+        %td
+          Telefon Numaram
     %tr
       %td
         %i.fa.fa-envelope.ico
       %td
-        bozkurttalperen@gmail.com
+        = current_user.email
     %tr
       %td
         %i.fa.fa-map-marker.ico
       %td
-        Hürel Mahallesi 25. Sokak Rails Apartmanı No:0 Mamak
-        #{"Ankara"}, #{"Türkiye"}
+        Adresim
 
     %tr
       %td
         %i.fa.fa-birthday-cake.ico
       %td
-        24 Eylül 1997 - 20 yaşına girmesine 28 gün kaldı.
+        Doğum Günüm - Yeni Yaşım girmeme x gün kaldı.
     %tr
       %td
         %i.fa.fa-globe.ico
       %td
-        = link_to 'alperenbozkurt.net', 'http://alperenbozkurt.net'
+        Websitem
     %tr
       %td
         %i.fa.fa-briefcase.ico
       %td
-
-        #{'Fırat Üniversitesi'}'nde #{'Öğrenci'}
+        Çalıştığınız Şirket şirketinde Mesleğiniz
     %tr
       %td
         %i.fa.fa-venus-mars.ico
       %td
-
-        Erkek
+        Cinsiyetiniz
     %tr
       %td
       %td
         %i.fa.fa-android.ico
       %td
-
-        İnsan
+        Irkınız
+  * Bu Bilgileri Profil Sayfasından Düzenleyebilirsiniz.
 .detail
   .block
     .title
@@ -88,8 +85,6 @@
   %h4.mdl-dialog__title Yeni Birisini Ekle
   .mdl-dialog__content
     = render 'form'
-  .mdl-dialog__actions
-    %button.mdl-button.close{:type => "button"} Disagree
 :javascript
   var dialog = document.querySelector('dialog');
   var showDialogButton = document.querySelector('#show-dialog');

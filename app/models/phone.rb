@@ -1,5 +1,4 @@
 class Phone < ApplicationRecord
   belongs_to :contact
-
-  validates_presence_of :contact
+  validates :phone, presence: true
 end
