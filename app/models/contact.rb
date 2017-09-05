@@ -32,4 +32,5 @@ class Contact < ApplicationRecord
     now = Time.now.utc.to_date.yday
     now < birthday ? birthday - now : (Date.new(Time.now.year + 1,12,31).yday - now) + birthday
   end
+
 end

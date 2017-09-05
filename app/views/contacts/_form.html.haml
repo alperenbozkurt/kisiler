@@ -1,4 +1,4 @@
-= form_for @new_contact do |f|
+= form_for @new_contact, html: { multipart: true } do |f|
   .field.mdl-textfield.mdl-js-textfield.mdl-textfield--floating-label
     = f.text_field :name, autofocus: true, class: "mdl-textfield__input"
     %label.mdl-textfield__label{:for => "sample3"} Ad
@@ -21,7 +21,7 @@
   .field.mdl-textfield.mdl-js-textfield.mdl-textfield--floating-label
     = f.text_field :country, class: "mdl-textfield__input"
     %label.mdl-textfield__label{:for => "sample3"} Ülke
-  .field.mdl-textfield.mdl-js-textfield.mdl-textfield--floating-label
+  .field.mdl-textfield.mdl-textfield--floating-label.is-dirty.is-upgraded
     = f.date_field :birthday, class: "mdl-textfield__input"
     %label.mdl-textfield__label{:for => "sample3"} Doğum Günü
   .field.mdl-textfield.mdl-js-textfield.mdl-textfield--floating-label
@@ -41,5 +41,5 @@
   .field.mdl-textfield.mdl-js-textfield.mdl-textfield--floating-label
     = f.file_field :avatar, class: "mdl-textfield__input"
   .mdl-dialog__actions
-    = f.submit "Kişiyi Ekle", id: "button", class: "mdl-button"
+    = f.submit "KİŞİYİ EKLE", id: "button", class: "mdl-button"
     %button.mdl-button.close{:type => "button"} İptal

@@ -4,7 +4,7 @@
     = link_to contact do
       .contact
         .image
-          = image_tag(contact.user.avatar(:thumb))
+          = image_tag(contact.avatar(:thumb))
         .name
           = contact.fullname
         .email
@@ -18,7 +18,7 @@
         = @contact.surname.upcase
     %tr
       %td{:rowspan => "7"}
-        = image_tag @contact.user.avatar(:medium), height: "250px", wight: "250px"
+        = image_tag @contact.avatar(:medium), height: "250px", width: "250px"
 
       - @contact.phones.each do |tel|
         %td

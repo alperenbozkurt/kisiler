@@ -23,6 +23,6 @@ class ContactsController < ApplicationController
   end
   private
   def strong_params
-    params.require(:contact).permit(:name, :surname, :birthday, :address, :city, :country, :email, :website, :company, :job, :gender, :race, :phones_attributes => [:phone])
+    params.require(:contact).permit(:name, :surname, :birthday, :address, :city, :country, :email, :website, :company, :job, :gender, :race, :avatar, :phones_attributes => [:phone])
   end
 end

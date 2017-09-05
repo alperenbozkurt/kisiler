@@ -59,6 +59,8 @@ body
       border: 1px solid rgba(0, 0, 0, 0.03)
       img
         width: 100%
+        height: 100%
+        object-fit: cover
 
 
 .detail
@@ -78,6 +80,8 @@ body
       td
         font-size: 17px
         line-height: 17px
+        img
+          object-fit: cover
   .avatar
     height: 250px
     width: 250px
@@ -135,6 +139,10 @@ a
   &:hover
     background-color: $second-color
 .mdl-dialog
+  width: 500px
+.mdl-textfield
   width: 400px
-.mdl-textfield--floating-label--colored
+.mdl-textfield__label
   color: $main-color !important
+.mdl-textfield__label:after
+  background-color: $main-color
