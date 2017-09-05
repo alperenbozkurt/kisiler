@@ -1,5 +1,6 @@
 .contacts
   .space
+  = "Buralarda in cin top oynuyor..." if @contacts.empty?
   - @contacts.each do |contact|
     = link_to contact do
       .contact
@@ -24,7 +25,7 @@
         %td
           %i.fa.fa-phone.ico
         %td
-          = tel.phone
+          = tel.humanize
     %tr
       %td
         %i.fa.fa-envelope.ico
@@ -71,7 +72,7 @@
   %p Lorem Ipsum, dizgi ve baskı endüstrisinde kullanılan mıgır metinlerdir. Lorem Ipsum, adı bilinmeyen bir matbaacının bir hurufat numune kitabı oluşturmak üzere bir yazı galerisini alarak karıştırdığı 1500'lerden beri endüstri standardı sahte metinler olarak kullanılmıştır. Beşyüz yıl boyunca varlığını sürdürmekle kalmamış, aynı zamanda pek değişmeden elektronik dizgiye de sıçramıştır. 1960'larda Lorem Ipsum pasajları da içeren Letraset yapraklarının yayınlanması ile ve yakın zamanda Aldus PageMaker gibi Lorem Ipsum sürümleri içeren masaüstü yayıncılık yazılımları ile popüler olmuştur.
   %br
   = link_to 'Önceki Yazıların', '#', style: "text-align: center"
-
+  
 .login
   .img#demo-menu-lower-right
     = image_tag current_user.avatar.url(:thumb)
@@ -83,7 +84,7 @@
   %i.material-icons +
 
 %dialog.mdl-dialog
-  %h4.mdl-dialog__title Yeni Birisini Ekle
+  %h4.mdl-dialog__title Yeni Kişi Ekle
   .mdl-dialog__content
     = render 'form'
 :javascript

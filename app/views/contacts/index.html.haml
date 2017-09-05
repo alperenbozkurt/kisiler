@@ -5,7 +5,7 @@
     = link_to contact do
       .contact
         .image
-          = image_tag(contact.user.avatar(:thumb))
+          = image_tag(contact.avatar(:thumb))
         .name
           = contact.fullname
         .email
@@ -82,7 +82,7 @@
   %i.material-icons +
 
 %dialog.mdl-dialog
-  %h4.mdl-dialog__title Yeni Birisini Ekle
+  %h4.mdl-dialog__title Yeni Kişi Ekle
   .mdl-dialog__content
     = render 'form'
 :javascript
